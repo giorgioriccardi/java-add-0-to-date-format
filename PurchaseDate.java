@@ -169,4 +169,23 @@ public class PurchaseDate
 		return result;
 	}
 
+	// metodo con lZero
+  // by https://github.com/afranceschetti/
+	public static String getTheDate3() {
+		return year + "-" + lZero(month, 2) + "-" + lZero(day, 2);
+	}
+
+	private static String lZero(int val, int outputLength) {
+		String result = "" + val;
+		if (result.length() < outputLength) {
+			String zeros = "";
+			for (int i = 0; i < outputLength - result.length(); i++) {
+				zeros += "0";
+			}
+			result = zeros + result;
+		}
+		return result;
+	}
+  // https://github.com/afranceschetti/
+
 }
