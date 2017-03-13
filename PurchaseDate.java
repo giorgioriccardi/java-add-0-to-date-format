@@ -21,16 +21,6 @@ public class PurchaseDate
     private static final int CURRENT_YEAR = 2017;
 
     private static final int JANUARY = 1;
-    // private static final int FEBRUARY = 2;
-    // private static final int MARCH = 3;
-    // private static final int APRIL = 4;
-    // private static final int MAY = 5;
-    // private static final int JUNE = 6;
-    // private static final int JULY = 7;
-    // private static final int AUGUST = 8;
-    // private static final int SEPTEMBER = 9;
-    // private static final int OCTOBER = 10;
-    // private static final int NOVEMBER = 11;
     private static final int DECEMBER = 12;
 
     private static final int FIRST_DAY = 1;
@@ -157,7 +147,19 @@ public class PurchaseDate
      */
     public String getTheDate()
     {
-      return year + "-" + month + "-" + day;
+      // return year + "-" + month + "-" + day;
+      // return year + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
+      String result = year + "-";
+
+  		if (month < 10)
+  			result += "0" + month + "-";
+  		else
+  			result += month + "-";
+  		if (day < 10)
+  			result += "0" + day;
+  		else
+  			result += day;
+  		return result;
     }
 
 }
