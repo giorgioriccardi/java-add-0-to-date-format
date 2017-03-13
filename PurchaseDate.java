@@ -147,19 +147,26 @@ public class PurchaseDate
      */
     public String getTheDate()
     {
-      // return year + "-" + month + "-" + day;
-      // return year + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
-      String result = year + "-";
-
-  		if (month < 10)
-  			result += "0" + month + "-";
-  		else
-  			result += month + "-";
-  		if (day < 10)
-  			result += "0" + day;
-  		else
-  			result += day;
-  		return result;
+      return year + "-" + (month<10?"0"+month:month) + "-" + (day<10?"0"+day:day);
     }
+
+	// metodo con notazione compatta
+	public static String getTheDate1() {
+		return year + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
+	}
+
+	// metodo con notazione espansa
+	public static String getTheDate2() {
+		String result = year + "-";
+		if (month < 10)
+			result += "0" + month + "-";
+		else
+			result += month + "-";
+		if (day < 10)
+			result += "0" + day;
+		else
+			result += day;
+		return result;
+	}
 
 }
