@@ -147,15 +147,15 @@ public class PurchaseDate
      */
     public String getTheDate()
     {
-      return year + "-" + (month<10?"0"+month:month) + "-" + (day<10?"0"+day:day);
+      return year + "-" + (month<10?"0"+month:month) + "-" + (day<10?"0"+day:day); // minified
     }
 
-	// metodo con notazione compatta
+	// method with compact notation (readble)
 	public static String getTheDate1() {
 		return year + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
 	}
 
-	// metodo con notazione espansa
+	// method with expanded notation
 	public static String getTheDate2() {
 		String result = year + "-";
 		if (month < 10)
@@ -169,7 +169,7 @@ public class PurchaseDate
 		return result;
 	}
 
-	// metodo con lZero
+	// with lZero method
   // by https://github.com/afranceschetti/
 	public static String getTheDate3() {
 		return year + "-" + lZero(month, 2) + "-" + lZero(day, 2);
@@ -186,6 +186,6 @@ public class PurchaseDate
 		}
 		return result;
 	}
-  // https://github.com/afranceschetti/
+  // credits to https://github.com/afranceschetti/
 
 }
